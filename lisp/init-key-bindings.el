@@ -26,21 +26,14 @@
 ;; Goto-line short-cut key
 (global-set-key "\C-j" 'goto-line)
 
-;; kill all buffers except the ones listed on not-to-kill-buffer-list
-;; ===============================
-(setq not-to-kill-buffer-list '("*scratch*"))
+;; protect scratch buffer
+(with-current-buffer "*scratch*"
+          (emacs-lock-mode 'kill))
+
 (defun kill-all-buffers ()
-  (interactive)
-  (save-excursion
-    (let ((count 0))
-      (dolist (buffer (buffer-list))
-	(set-buffer buffer)
-	(if (member (buffer-name) not-to-kill-buffer-list)
-	    (setq count (1+ count))
-	  (kill-buffer buffer)))
-      (message "Killed %i dired buffer(s)." count))))
+(interactive)
+  (mapc 'kill-buffer (buffer-list)))
 
 (global-set-key "\C-ck" 'kill-all-buffers)
-;; ===============================
 
 (provide 'init-key-bindings)
