@@ -1,5 +1,6 @@
 (require 'init-elpa)
-(require 'powerline)
+
+(require-package 'powerline)
 
 (powerline-default-theme)
 

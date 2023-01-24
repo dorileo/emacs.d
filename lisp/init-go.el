@@ -1,6 +1,6 @@
 (require 'init-elpa)
 (require 'init-company-go)
-(require 'go-mode)
+
 (require-package 'go-mode)
 
 (add-hook 'go-mode-hook

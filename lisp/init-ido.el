@@ -1,5 +1,5 @@
 (require 'init-elpa)
-(require 'ido)
+
 (require-package 'idomenu)
 
 (setq ido-save-directory-list-file (locate-user-emacs-file "data/ido.last"))

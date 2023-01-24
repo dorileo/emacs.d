@@ -1,5 +1,6 @@
 (require 'init-elpa)
-(require 'magit)
+
+(require-package 'magit)
 
 (setq magit-display-buffer-function
       (lambda (buffer)

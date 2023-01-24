@@ -1,4 +1,5 @@
 (require 'init-elpa)
-(require 'yasnippet)
+
+(require-package 'yasnippet)
 
 (provide 'init-yasnippet)

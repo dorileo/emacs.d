@@ -1,6 +1,5 @@
 (require 'init-elpa)
 (require 'init-company-mode)
-(require 'company-go)
 (require-package 'company-go)
 
 ; bigger popup window

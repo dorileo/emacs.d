@@ -1,5 +1,7 @@
-(require 'org)
-(require 'org-bullets)
+(require 'init-elpa)
+
+(require-package 'org)
+(require-package 'org-bullets)
 
 ;; auto-save org-mode buffers
 (add-hook 'auto-save-hook 'org-save-all-org-buffers)
