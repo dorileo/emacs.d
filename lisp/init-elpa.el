@@ -1,6 +1,9 @@
 (require 'package)
 (package-initialize)
 
+;; older Emacs <= 26.2 will require this
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
+
 (defun require-package (package)
   "Install given PACKAGE if it was not installed before."
   (if (package-installed-p package)
