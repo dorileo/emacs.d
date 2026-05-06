@@ -16,3 +16,4 @@
 (require 'init-ui)
 (require 'init-yaml)
 (require 'init-yasnippet)
+(require 'init-format-all)
