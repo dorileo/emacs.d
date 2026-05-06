@@ -37,4 +37,7 @@
 
 (display-time-mode 1)
 
+
+(setq-default tab-width 2)
+
 (provide 'init-ui)
